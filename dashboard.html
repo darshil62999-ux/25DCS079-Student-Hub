@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" aria-label="StudentHub home">StudentHub</a>
+    </div>
+    <p class="welcome">Welcome, <span id="user-name">Student Name</span></p>
+    <div class="account-actions">
+      <a href="profile.html">Profile</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <nav aria-label="App navigation" class="sidebar">
+      <ul>
+        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <h1>Dashboard</h1>
+
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading" class="visually-hidden">Summary</h2>
+        <ul class="summary-cards">
+          <li><span class="stat-label">Attendance</span><span class="stat-value">--%</span></li>
+          <li><span class="stat-label">Pending assignments</span><span class="stat-value">--</span></li>
+          <li><span class="stat-label">Latest grade</span><span class="stat-value">--</span></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="timetable-heading">
+        <h2 id="timetable-heading">Today's timetable</h2>
+        <ul id="today-timetable">
+          <li>No classes loaded yet.</li>
+        </ul>
+        <a href="timetable.html">View full timetable</a>
+      </section>
+
+      <section aria-labelledby="notices-heading">
+        <h2 id="notices-heading">Recent notices</h2>
+        <ul id="recent-notices">
+          <li>No notices loaded yet.</li>
+        </ul>
+        <a href="notices.html">View all notices</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 StudentHub. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub | Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" aria-label="StudentHub home">StudentHub</a>
+    </div>
+    <div class="account-actions">
+      <a href="profile.html" aria-current="page">Profile</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <nav aria-label="App navigation" class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html" aria-current="page">Profile</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <h1>My profile</h1>
+
+      <section aria-labelledby="profile-photo-heading">
+        <h2 id="profile-photo-heading" class="visually-hidden">Profile photo</h2>
+        <img src="assets/images/avatar-placeholder.svg" alt="Profile photo" width="80" height="80">
+        <button type="button">Change photo</button>
+      </section>
+
+      <section aria-labelledby="profile-details-heading">
+        <h2 id="profile-details-heading">Account details</h2>
+        <form action="#" method="post" novalidate>
+          <div class="form-group">
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" name="full_name" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="student-id">Enrollment / Staff ID</label>
+            <input type="text" id="student-id" name="student_id" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="department">Department / Batch</label>
+            <input type="text" id="department" name="department">
+          </div>
+
+          <button type="submit">Save changes</button>
+          <a href="#" class="change-password">Change password</a>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 StudentHub. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
