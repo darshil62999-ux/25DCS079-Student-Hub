@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub | Notices</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" aria-label="StudentHub home">StudentHub</a>
+    </div>
+    <div class="account-actions">
+
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <nav aria-label="App navigation" class="sidebar">
+      <ul>
+        
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <h1>Notices</h1>
+
+      <section aria-labelledby="notice-list-heading">
+        <h2 id="notice-list-heading" class="visually-hidden">Announcements</h2>
+
+        <form class="data-controls" role="search" aria-label="Search and filter notices" onsubmit="return false;">
+          <div class="form-group">
+            <label for="notice-search">Search notices</label>
+            <input type="search" id="notice-search" placeholder="Search by title or message">
+          </div>
+          <div class="form-group">
+            <label for="notice-category">Category</label>
+            <select id="notice-category">
+              <option value="">All categories</option>
+              <option value="Academic">Academic</option>
+              <option value="Exam">Exam</option>
+              <option value="Event">Event</option>
+              <option value="Administrative">Administrative</option>
+              <option value="Placement">Placement</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="notice-sort">Sort by</label>
+            <select id="notice-sort">
+              <option value="date-desc">Newest first</option>
+              <option value="date-asc">Oldest first</option>
+              <option value="priority">Priority (urgent first)</option>
+              <option value="title-asc">Title (A–Z)</option>
+            </select>
+          </div>
+        </form>
+
+        <p id="notice-result-count" class="result-count" role="status"></p>
+        <p id="notice-loading" class="loading-state">Loading notices&hellip;</p>
+        <p id="notice-error" class="error-state" hidden>Couldn't load notices right now. Please try again later.</p>
+
+        <ul id="notice-list" hidden></ul>
+
+        <nav class="pagination" id="notice-pagination" aria-label="Notices pagination" hidden></nav>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 StudentHub. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/notices.js" defer></script>
+</body>
+</html>

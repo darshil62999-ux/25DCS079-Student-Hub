@@ -6,8 +6,32 @@
   <title>StudentHub | Home</title>
   <meta name="description" content="StudentHub is a centralized portal for students, faculty and admins to manage courses, attendance, assignments and grades.">
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
+
+   <button id="themeToggle" type="button">🌙</button>
+
+<script>
+    const button = document.getElementById("themeToggle");
+
+    button.addEventListener("click", function () {
+
+        const isDark =
+            document.documentElement.getAttribute("data-theme") === "dark";
+
+        if (isDark) {
+            // Switch back to light
+            document.documentElement.removeAttribute("data-theme");
+            button.textContent = "🌙";
+        } else {
+            // Switch to dark
+            document.documentElement.setAttribute("data-theme", "dark");
+            button.textContent = "☀️";
+        }
+
+    });
+</script>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header>
@@ -18,14 +42,24 @@
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
         <li><a href="#contact">Contact</a></li>
+
+        <li><a href="faq.html">FAQ</a></li>
+        
+
+
+         <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      <li><a href="notices.html">Notices</a></li>
+      
+
       </ul>
     </nav>
     <div class="auth-actions">
       <a href="login.html">Login</a>
       <a href="register.html">Register</a>
     </div>
+  
   </header>
 
   <main id="main-content">
@@ -34,6 +68,8 @@
       <p>Courses, attendance, assignments, grades and notices — all in one place for students, faculty and admins.</p>
       <a href="register.html" class="cta">Get started</a>
     </section>
+
+   
 
     <section id="features" aria-labelledby="features-heading">
       <h2 id="features-heading">What you can do</h2>
@@ -73,6 +109,11 @@
     <p>&copy; 2026 StudentHub. All rights reserved.</p>
   </footer>
 
+  
+
   <script src="js/main.js" defer></script>
+  <script src="js/Student.js" defer></script>
+  
+
 </body>
 </html>

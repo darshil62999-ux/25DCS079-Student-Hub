@@ -28,11 +28,11 @@
         <li><a href="attendance.html">Attendance</a></li>
         <li><a href="assignments.html">Assignments</a></li>
         <li><a href="grades.html">Grades</a></li>
-        <li><a href="timetable.html">Timetable</a></li>
-        <li><a href="notices.html">Notices</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="admin.html">Admin</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="index.html">Home</a></li>
+        <l
       </ul>
+      <button id="themeToggle" type="button">🌙</button>
     </nav>
 
     <main id="main-content">
@@ -69,6 +69,34 @@
     <p>&copy; 2026 StudentHub. All rights reserved.</p>
   </footer>
 
+  <button id="themeToggle" type="button">🌙</button>
+
+<script>
+    const button = document.getElementById("themeToggle");
+
+    button.addEventListener("click", function () {
+
+        const isDark =
+            document.documentElement.getAttribute("data-theme") === "dark";
+
+        if (isDark) {
+            // Switch back to light
+            document.documentElement.removeAttribute("data-theme");
+            button.textContent = "🌙";
+        } else {
+            // Switch to dark
+            document.documentElement.setAttribute("data-theme", "dark");
+            button.textContent = "☀️";
+        }
+
+    });
+</script>
+
+
+
+
   <script src="js/main.js" defer></script>
+  <script src="js/Student.js" defer></script>
+  
 </body>
 </html>

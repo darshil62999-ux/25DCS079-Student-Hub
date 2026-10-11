@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudentHub | Register</title>
   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/register.css">
+  
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -26,13 +29,35 @@
     <section aria-labelledby="register-heading">
       <h1 id="register-heading">Create your account</h1>
 
-      <form action="#" method="post" novalidate>
+      <form action="php/register.php" method="post">
         <fieldset>
           <legend>Account details</legend>
 
           <div class="form-group">
             <label for="fullname">Full name</label>
-            <input type="text" id="fullname" name="fullname" autocomplete="name" required>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              autocomplete="name"
+              maxlength="100"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              autocomplete="username"
+              minlength="3"
+              maxlength="30"
+              pattern="[A-Za-z0-9_]+"
+              title="Use 3–30 letters, numbers or underscores."
+              required
+            >
           </div>
 
           <div class="form-group">
@@ -46,29 +71,61 @@
 
           <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              maxlength="254"
+              required
+            >
           </div>
 
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" autocomplete="new-password" required minlength="8">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            >
           </div>
 
           <div class="form-group">
             <label for="confirm-password">Confirm password</label>
-            <input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password" required minlength="8">
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            >
           </div>
 
           <div class="form-group checkbox">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the terms and conditions</label>
+            <input
+              type="checkbox"
+              id="terms"
+              name="terms"
+              value="accepted"
+              required
+            >
+            <label for="terms">
+              I agree to the terms and conditions
+            </label>
           </div>
         </fieldset>
 
         <button type="submit">Create account</button>
       </form>
 
-      <p>Already have an account? <a href="login.html">Login here</a></p>
+      <p>
+        Already have an account?
+        <a href="login.html">Login here</a>
+      </p>
     </section>
   </main>
 
@@ -77,5 +134,6 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+   <script src="js/register.js" defer></script>
 </body>
 </html>
